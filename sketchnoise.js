@@ -69,16 +69,16 @@ function draw() {
   }
 
 
-  function keyTyped(){
+}
 
-  if (key === 's'){
+function keyTyped(){
 
-  //save this image
-  saveCanvas('fileName', 'png')
+if (key === 's'){
 
-  }
+//save this image
+saveCanvas('fileName', 'png')
 
-  return false;
+}
 
-
+return false;
 }
