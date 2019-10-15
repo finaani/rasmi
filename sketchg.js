@@ -1,7 +1,6 @@
 let grade = [];
 let value = 0;
 
-
 function setup() {
   createCanvas(720, 360);
   for (let i = 0; i < width; i++) {
@@ -18,7 +17,6 @@ fill(value);
 }
 
 function draw() {
-
 
    //line(mouseX, 0, mouseX, 360);
 
@@ -45,7 +43,7 @@ function draw() {
   y1 = y2;
   y2 = height;
   for (let i = 0; i < width; i += 3) {
-    stroke(255 - grade[i] * 255, 153, 204 - mouseX, mouseY);
+    stroke(255 - grade[i] * 255, 153, 204 + mouseX, mouseY);
     line(i, y1, i, y2);
 
   }
@@ -54,7 +52,10 @@ function draw() {
   y1 = y2;
   y3 = width ;
   for (let i = 0; i < width; i += 3) {
-  stroke(grade[i] * 255, 89, 126 -  mouseX, mouseY);
+  stroke(grade[i] * (255, 89, 126) -  mouseX, mouseY);
   line(i, y1, i, y2);
 
   }
+
+
+}
