@@ -1,8 +1,11 @@
 let grade = [];
 let value = 0;
 
+let noiseScale=0.02; //noise
+
+
 function setup() {
-  createCanvas(1024, 720);
+  createCanvas(1000, 600);
   for (let i = 0; i < width; i++) {
     let amount = map(i, 0, width, 0, PI);
     grade[i] = abs(cos(amount));
@@ -55,6 +58,14 @@ function draw() {
   stroke(grade[i] * (255, 89, 126) -  mouseX, mouseY);
   line(i, y1, i, y2);
 
+  }
+
+
+  //noise
+  for (let x=0; x < width; x++) {
+    let noiseVal = noise((mouseX+x)*noiseScale, mouseY*noiseScale);
+    stroke(noiseVal*random(255),random(255),random(255));
+    line(x, mouseY+noiseVal*80, x, height);
   }
 
 
