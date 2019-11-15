@@ -1,0 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+#grad {
+  background-image: linear-gradient(to bottom right, #ff14af, #ff1439);
+}
+#grad1 {
+  height: 800px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, #ff14af, #ff1439); /* Standard syntax (must be last) */
+}
